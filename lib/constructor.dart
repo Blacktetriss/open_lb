@@ -1,9 +1,8 @@
 import 'package:flutter/material.dart';
-// import 'package:open_lb/theme.dart';
+import 'package:open_lb/screens/titlepage.dart';
 
 class TitleCard extends StatelessWidget {
   TitleCard({@required this.iconcard, this.icontext, this.icontap});
-
 
   final Image iconcard;
   final Text icontext;
@@ -13,48 +12,40 @@ class TitleCard extends StatelessWidget {
   Widget build(BuildContext context) {
     return GestureDetector(
       onTap: () {
-        Navigator.push(context, _TitlePage());
+        Navigator.push(context,
+        MaterialPageRoute(builder: (context) => TitlePage()));
       },
-     child: Container(
-  width: 150,
-  height: 180,
-  margin: EdgeInsets.all(7.0),
-  padding: EdgeInsets.all(20.0),
-  decoration: BoxDecoration(
-    color: Colors.orange[100],
-    borderRadius: BorderRadius.circular(10.0),
-  ),
-  child: Column(
-    crossAxisAlignment: CrossAxisAlignment.center,
-    mainAxisAlignment: MainAxisAlignment.start,
-    children:[
-      iconcard,
-      icontext,
-      ],
-    ),
-    ),
-  );
+      child: Container(
+        width: 150,
+        height: 180,
+        margin: EdgeInsets.all(7.0),
+        padding: EdgeInsets.all(20.0),
+        decoration: BoxDecoration(
+          color: Color(0xFFc9bbb7),
+          borderRadius: BorderRadius.circular(10.0),
+        ),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.center,
+          mainAxisAlignment: MainAxisAlignment.start,
+          children: [
+            iconcard,
+            icontext,
+          ],
+        ),
+      ),
+    );
   }
 }
 
-class _TitlePage extends MaterialPageRoute<Null>{
-  _TitlePage(): super(builder:(BuildContext context) {
-    return AppBar(
-      title: Text('1488'),
-      elevation: 1.0);
-    
-  }
-  );
-}
+// class _TitlePage extends MaterialPageRoute<Null>{
+//   _TitlePage(): super(builder:(BuildContext context) {
+//     return AppBar(
+//       title: Text('1488'),
+//       elevation: 1.0);
 
-
-
-
-
-
-
-
-
+//   }
+//   );
+// }
 
 // class FirstRoute extends StatelessWidget {
 //   @override

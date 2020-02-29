@@ -1,29 +1,48 @@
 import 'package:flutter/material.dart';
 
-class TitlePage extends StatelessWidget {
-  TitlePage(
-    {@required this.titlePage});
+class TitlePage extends StatefulWidget {
+  @override
+  _TitlePageState createState() => _TitlePageState();
 }
 
-final Scaffold titlePage;
+class _TitlePageState extends State<TitlePage> {
+  // Gender selectedGender;
+  // int height = 180;
+  // int weight = 60;
+  // int age = 20;
 
-@override
+  @override
 Widget build(BuildContext context) {
   return Scaffold(
     appBar: AppBar(
-      title: Text('ART'),
+        backgroundColor: Color(0xFFA39884),
+        textTheme: TextTheme(),
+        title: Text('ART'),
+        // leading: Icon(Icons.view_headline),
+      ),
       body: GridView.count(
   primary: false,
   padding: const EdgeInsets.all(20),
-  crossAxisSpacing: 10,
-  mainAxisSpacing: 10,
+  crossAxisSpacing: 7,
+  mainAxisSpacing: 7,
   crossAxisCount: 2,
   children: <Widget>[
     Container(
-      padding: const EdgeInsets.all(8),
-      child: const Text('He\'d have you all unravel at the'),
-      color: Colors.teal[100],
-    ),
+        width: 150,
+        height: 180,
+        margin: EdgeInsets.all(7.0),
+        decoration: BoxDecoration(
+          color: Color(0xFFc9bbb7),
+          borderRadius: BorderRadius.circular(10.0),),
+child: Column(
+  crossAxisAlignment: CrossAxisAlignment.center,
+  mainAxisAlignment: MainAxisAlignment.start,
+  children: [
+    Image.asset('2613580-M.jpg'),
+    Text('Picasso'),
+    ],
+    ),),
+
     Container(
       padding: const EdgeInsets.all(8),
       child: const Text('Heed not the rabble'),
@@ -51,7 +70,6 @@ Widget build(BuildContext context) {
     ),
   ],
 ),
-      
-    ),
   );
+}
 }
