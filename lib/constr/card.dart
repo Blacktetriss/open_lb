@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 class TitleBox extends StatelessWidget {
   final String imageCard, textCard;
 
-  const TitleBox (this.imageCard, this.textCard);
+  const TitleBox(this.imageCard, this.textCard);
 
   @override
   Widget build(BuildContext context) {
@@ -26,16 +26,15 @@ class TitleBox extends StatelessWidget {
             height: 180,
             child: Image.asset(imageCard, fit: BoxFit.fitWidth),
           ),
-          Text(textCard,
+          Text(
+            textCard,
             style: TextStyle(
-                fontFamily: ('WorkSans'),
-                fontSize: 14.0
-            ),
+                fontWeight: FontWeight.w500,
+                fontFamily: ('Spartan'),
+                fontSize: 16.0),
           ),
         ],
       ),
     );
   }
 }
-
-

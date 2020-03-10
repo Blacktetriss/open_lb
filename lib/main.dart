@@ -12,40 +12,35 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
-        primaryColor: Color(0xFF99C0E1),
-        scaffoldBackgroundColor: Color(0xFFA39884),
-        accentColor: Color(0xFF02598B),
-        fontFamily: 'WorkSans',
+        accentColor: Color(0xFFc9bbb7),
+        backgroundColor: Color(0xFF8B8881),
+        scaffoldBackgroundColor: Color(0xFF8B8881),
+        fontFamily: 'Spartan',
         textTheme: TextTheme(
           title: TextStyle(
             color: Colors.black,
-            fontFamily: 'WorkSans',
+            fontFamily: 'Spartan',
             fontWeight: FontWeight.normal,
-            letterSpacing: 1.0,
-            fontSize: (14.0),
-          ),
-          body1: TextStyle(
-            color: Colors.black,
-            fontFamily: 'WorkSans',
-            fontWeight: FontWeight.normal,
-            letterSpacing: 1.0,
             fontSize: (14.0),
           ),
         ),
         appBarTheme: AppBarTheme(
-          color: Color(0xFFA39884),
+          color: Color(0xFF8B8881),
           textTheme: TextTheme(
           title: TextStyle(
             color: Colors.black,
-            fontFamily: 'WorkSans',
+            fontFamily:'Spartan',
 //            fontWeight: FontWeight.bold,
 //            letterSpacing: 1.0,
-            fontSize: (18.0),
+            fontSize: (20.0),
+            fontWeight: FontWeight.w500,
           ),
       ),
       ),
       buttonTheme: ButtonThemeData(
-        buttonColor: Color(0xFFA39884),
+        disabledColor: Color(0xFF5A768E),
+        buttonColor: Color(0xFF5A768E),
+//        textTheme: ButtonTextTheme.normal,
         )
       ),
         home: Home(),

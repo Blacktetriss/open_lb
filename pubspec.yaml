@@ -77,11 +77,11 @@ flutter:
   # list giving the asset and other descriptors for the font. For
   # example:
   fonts:
-     - family: WorkSans
+     - family: Spartan
        fonts:
-         - asset: fonts/WorkSans-Medium.ttf
-         - asset: fonts/WorkSans-Regular.ttf
-         - asset: fonts/WorkSans-Bold.ttf
+         - asset: fonts/Spartan-Regular.ttf
+         - asset: fonts/Spartan-Bold.ttf
+         - asset: fonts/Spartan-Light.ttf
   #         style: italic
   #   - family: Trajan Pro
   #     fonts:
