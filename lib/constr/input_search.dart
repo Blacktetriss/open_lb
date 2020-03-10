@@ -21,16 +21,18 @@ class _InputSearch extends State<InputSearch> {
   }
 
   Widget build(BuildContext context) {
-    return Container(
+    return 
+    Container(
             margin: EdgeInsets.all(7.0),
             padding: EdgeInsets.all(7.0),
             height: 80,
             decoration: BoxDecoration(
               color: Color(0xFFc9bbb7),
               borderRadius: BorderRadius.circular(10.0),),
-              child: TextFormField(
+              child: 
+              TextFormField(
                 decoration: InputDecoration(labelText: 'search'),
-              ),
-          );
+    ),
+    );
   }
 }
