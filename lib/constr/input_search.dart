@@ -29,8 +29,7 @@ class _InputSearch extends State<InputSearch> {
             decoration: BoxDecoration(
               color: Color(0xFFc9bbb7),
               borderRadius: BorderRadius.circular(10.0),),
-              child: 
-              TextFormField(
+              child: TextFormField(
                 decoration: InputDecoration(labelText: 'search'),
     ),
     );

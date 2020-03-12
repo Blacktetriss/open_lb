@@ -25,6 +25,7 @@ class MyApp extends StatelessWidget {
           ),
         ),
         appBarTheme: AppBarTheme(
+          actionsIconTheme: IconThemeData(color: Colors.black),
           color: Color(0xFF8B8881),
           textTheme: TextTheme(
           title: TextStyle(
@@ -43,7 +44,9 @@ class MyApp extends StatelessWidget {
 //        textTheme: ButtonTextTheme.normal,
         )
       ),
-        home: Home(),
+        home: HomePage(),
     );
   }
 }
+
+

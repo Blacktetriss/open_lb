@@ -2,28 +2,34 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:open_lb/main.dart';
 import 'package:open_lb/constr/card.dart';
-//import 'package:open_lb/screens/titlepage.dart';
+import 'package:open_lb/screens/titlepage.dart';
 import 'package:open_lb/constr/input_search.dart';
 import 'package:open_lb/constr/sponsor_banner.dart';
 
-class Home extends StatelessWidget {
+class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        leading: Icon(Icons.menu),
         title: Text('OPEN LIBRARY'),
       ),
       body: Column(
         children: <Widget>[
           Container(
             margin: EdgeInsets.symmetric(vertical: 1.0),
-            height: 260.0,
+            height: 268.0,
             child: ListView(
               scrollDirection: Axis.horizontal,
               children: <Widget>[
-                TitleBox('art.png', 'ART'),
-                TitleBox('fantasy.png', 'FANTASY'),
+                GestureDetector(
+                    onTap: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(builder: (context) => TitlePage()),
+                      );
+                    },
+                    child: TitleBox('art.png', 'ART')),
+                TitleBox('fantasy.png','FANTASY',),
                 TitleBox('biography.png', 'BIOGRAPHIES'),
                 TitleBox('science.png', 'SCIENCE'),
                 TitleBox('recept.png', 'RECIPES'),
@@ -40,7 +46,8 @@ class Home extends StatelessWidget {
               ],
             ),
           ),
-          SponsorBanner(),
+          GestureDetector(
+              child: SponsorBanner()),
           Container(
             child: Expanded(
               flex: 1,

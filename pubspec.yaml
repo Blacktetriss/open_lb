@@ -57,12 +57,18 @@ flutter:
     - romant.png
     - science.png
     - scienceFF.png
-    - 2613580-M.jpg
-    - 4703873-M.jpg
-    - 5939619-M.jpg
-    - 7879121-M.jpg
-    - 8236963-M.jpg
-    - 8410349-M.jpg
+    - 1.jpg
+    - 2.jpg
+    - 3.jpg
+    - 4.jpg
+    - 5.jpg
+    - 6.jpg
+    - 1a.jpg
+    - 2a.jpg
+    - 3a.jpg
+    - 4a.jpg
+    - 5a.jpg
+    - 6a.jpg
  
 
   # An image asset can refer to one or more resolution-specific "variants", see
