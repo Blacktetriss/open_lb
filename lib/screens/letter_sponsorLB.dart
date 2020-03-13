@@ -17,32 +17,44 @@ class LetterSponsor extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
             GestureDetector(onTap: () {Navigator.push(context,
-              MaterialPageRoute(builder: (context) => TitlePage()),);},
-              child: Container(
-                    height: 60,
-                    margin: EdgeInsets.fromLTRB(30.0, 30.0, 30.0, 0.0),
-                    decoration: BoxDecoration(
-                      color: Color(0xFFc9bbb7),
-                      borderRadius: BorderRadius.only(
-                        topRight: Radius.circular(10.0),
-                        topLeft: Radius.circular(10.0),
-                      ),
+              MaterialPageRoute(builder: (context) => HomePage()),);},
+              child: Stack(
+                alignment: AlignmentDirectional.topEnd,
+                children: <Widget>[
+                Container(
+                  height: 60,
+                  margin: EdgeInsets.fromLTRB(30.0, 30.0, 30.0, 0.0),
+                  decoration: BoxDecoration(
+                    color: Color(0xFFc9bbb7),
+                    borderRadius: BorderRadius.only(
+                      topRight: Radius.circular(10.0),
+                      topLeft: Radius.circular(10.0),
                     ),
-                    child:Center(
-                          child: TextTop(),),
-                    ),),
+                  ),
+                  child: Center(child: TextTop()),
+                ),
+                Container(
+                  height: 60,
+                  margin: EdgeInsets.fromLTRB(30.0, 14.0, 30.0, 0.0),
+                  child: Icon(
+                    Icons.highlight_off,
+                    color: Colors.black54,
+                    size: 28.0,
+                    semanticLabel: 'Text to announce in accessibility modes',
+                  ),
+                ),
+              ],
+              ),
+            ),
 
             Expanded(
-              child: GestureDetector(onTap: () {Navigator.push(context,
-                MaterialPageRoute(builder: (context) => HomePage()),);},
-                child: Container(
-                    padding: EdgeInsets.fromLTRB(8.0, 0.0, 8.0, 8.0),
-                    margin: EdgeInsets.fromLTRB(30.0, 0.0, 30.0, 0.0),
-                    decoration: BoxDecoration(
-                      color: Color(0xFFc9bbb7),
-                      ),
-                  child: TextBlock(),
-                ),
+              child: Container(
+                  padding: EdgeInsets.fromLTRB(8.0, 0.0, 8.0, 1.0),
+                  margin: EdgeInsets.fromLTRB(30.0, 0.0, 30.0, 0.0),
+                  decoration: BoxDecoration(
+                    color: Color(0xFFc9bbb7),
+                    ),
+                child: TextBlock(),
               ),
             ),
 //Text Block
