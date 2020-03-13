@@ -15,6 +15,7 @@ class HomePage extends StatelessWidget {
       ),
       body: Column(
         children: <Widget>[
+          GestureDetector(child: SponsorBanner()),
           Container(
             margin: EdgeInsets.symmetric(vertical: 1.0),
             height: 268.0,
@@ -29,7 +30,10 @@ class HomePage extends StatelessWidget {
                       );
                     },
                     child: TitleBox('art.png', 'ART')),
-                TitleBox('fantasy.png','FANTASY',),
+                TitleBox(
+                  'fantasy.png',
+                  'FANTASY',
+                ),
                 TitleBox('biography.png', 'BIOGRAPHIES'),
                 TitleBox('science.png', 'SCIENCE'),
                 TitleBox('recept.png', 'RECIPES'),
@@ -46,26 +50,29 @@ class HomePage extends StatelessWidget {
               ],
             ),
           ),
-          GestureDetector(
-              child: SponsorBanner()),
-          Container(
-            child: Expanded(
-              flex: 1,
-              child: Container(
-                margin: EdgeInsets.all(8.0),
-                height: 80,
-                decoration: BoxDecoration(
-                  color: Theme.of(context).accentColor,
-                  borderRadius: BorderRadius.only(
-                    topLeft: Radius.circular(10.0),
-                    topRight: Radius.circular(10.0),
+          Column(
+            crossAxisAlignment: CrossAxisAlignment.stretch,
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: <Widget>[
+              Container(
+                      margin: EdgeInsets.all(8.0),
+                      decoration: BoxDecoration(
+                        color: Theme.of(context).accentColor,
+                        borderRadius: BorderRadius.only(
+                          topLeft: Radius.circular(10.0),
+                          topRight: Radius.circular(10.0),
+                        ),
+                      ),
+                      child: Container(
+                        color: Colors.red,
+                        margin: EdgeInsets.all(8.0),
+                        child: Image.asset('ads.jpg',
+                          fit: BoxFit.fitHeight,),
+                      )
                   ),
-                ),
-//                child: Text('ads'),
-              ),
-            ),
+            ],
           ),
-        ],
+          ],
       ),
     );
   }

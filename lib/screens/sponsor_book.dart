@@ -6,13 +6,13 @@ import 'package:open_lb/constr/input_search.dart';
 import 'package:open_lb/constr/sponsor_banner.dart';
 import 'package:open_lb/screens/home.dart';
 
-class TitlePage extends StatelessWidget {
+class SponsorBooksPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
         leading: Icon(Icons.menu),
-        title: Text('ART LIBRARY'),
+        title: Text('BOOKS TO SPONSOR'),
       ),
       body: Column(
         children: <Widget>[
@@ -30,7 +30,7 @@ class TitlePage extends StatelessWidget {
                         MaterialPageRoute(builder: (context) => HomePage()),
                       );
                     },
-                    child: TitleBox('1a.jpg', 'ART 01')),
+                    child: TitleBox('s4.jpg', 'Sponsor eBook')),
                 GestureDetector(
                     onTap: () {
                       Navigator.push(
@@ -38,11 +38,11 @@ class TitlePage extends StatelessWidget {
                         MaterialPageRoute(builder: (context) => HomePage()),
                       );
                     },
-                    child: TitleBox('2a.jpg', 'FANTASY 02')),
-                TitleBox('7a.jpg', 'BIOGRAPHIES'),
-                TitleBox('4a.jpg', 'SCIENCE'),
-                TitleBox('5a.jpg', 'RECIPES'),
-                TitleBox('6a.jpg', 'ROMANCE'),
+                    child: TitleBox('s7.jpg', 'Sponsor eBook')),
+                TitleBox('s1.jpg', 'Sponsor eBook'),
+                TitleBox('s2.jpg', 'Sponsor eBook'),
+                TitleBox('s3.jpg', 'Sponsor eBook'),
+                TitleBox('s5.jpg', 'Sponsor eBook'),
 //                TitleBox('religion.png', 'RELIGION', 'RELIGION'),
 //                TitleBox('detectiv.png', 'DETECTIVE', 'DETECTIVE'),
 //                TitleBox('audio.png', 'MUSIC', 'MUSIC'),
@@ -59,21 +59,21 @@ class TitlePage extends StatelessWidget {
           Container(
             child: Expanded(
               child: Container(
-                margin: EdgeInsets.all(8.0),
-                height: 80,
-                decoration: BoxDecoration(
-                  color: Theme.of(context).accentColor,
-                  borderRadius: BorderRadius.only(
-                    topLeft: Radius.circular(10.0),
-                    topRight: Radius.circular(10.0),
-                  ),
-                ),
-                child: Container(
-                  color: Colors.red,
                   margin: EdgeInsets.all(8.0),
-                  child: Image.asset('ads.jpg',
-                  fit: BoxFit.scaleDown,),
-                )
+                  height: 80,
+                  decoration: BoxDecoration(
+                    color: Theme.of(context).accentColor,
+                    borderRadius: BorderRadius.only(
+                      topLeft: Radius.circular(10.0),
+                      topRight: Radius.circular(10.0),
+                    ),
+                  ),
+                  child: Container(
+                    color: Colors.red,
+                    margin: EdgeInsets.all(8.0),
+                    child: Image.asset('ads.jpg',
+                      fit: BoxFit.scaleDown,),
+                  )
               ),
             ),
           ),
