@@ -1,6 +1,5 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:open_lb/screens/letter_sponsorLB.dart';
 
 class TextBlockSpan extends StatelessWidget {
   @override
@@ -10,7 +9,7 @@ class TextBlockSpan extends StatelessWidget {
         textAlign: TextAlign.left,
         text: TextSpan(
           style: TextStyle(
-            fontSize: 18.0,
+            fontSize: 14.0,
             color: Colors.black54,
             fontWeight: FontWeight.normal,
           ),

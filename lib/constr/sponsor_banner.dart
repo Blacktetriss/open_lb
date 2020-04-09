@@ -11,7 +11,7 @@ class SponsorBanner extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      margin: EdgeInsets.all(8.0),
+      margin: EdgeInsets.all(4.0),
       child: Row(
         mainAxisSize: MainAxisSize.max,
         children: <Widget>[
@@ -24,9 +24,9 @@ class SponsorBanner extends StatelessWidget {
                 );
               },
               child: Container(
-                padding: EdgeInsets.all(8.0),
+                padding: EdgeInsets.all(0.0),
                 margin: EdgeInsets.only(right: 0.0),
-                height: 80,
+                height: 60,
                 decoration: BoxDecoration(
                   color: Theme.of(context).accentColor,
 //                color: Color(0xFFc9bbb7),
@@ -39,22 +39,21 @@ class SponsorBanner extends StatelessWidget {
                   textAlign: TextAlign.right,
                   text: TextSpan(
                     style: TextStyle(
-                      fontSize: 18.0,
+                      fontSize: 14.0,
                       color: Colors.black,
                       fontWeight: FontWeight.normal,
                     ),
                     children: <TextSpan>[
                       TextSpan(text: ' Together\, let\'s build an\n'),
                       TextSpan(
-                        text: ' OPEN LIBRARY',
+                        text: ' OPEN LIBRARY ',
                         style: TextStyle(
                           fontWeight: FontWeight.w600,
                           color: Color(0xFF5A768E),
                         ),
                       ),
-                      TextSpan(text: '\n for the '),
                       TextSpan(
-                        text: 'World.',
+                        text: 'for the World.',
                         style: TextStyle(
                           decoration: TextDecoration.underline,
                         ),
@@ -66,21 +65,15 @@ class SponsorBanner extends StatelessWidget {
             ),
           ),
           Container(
-            margin: EdgeInsets.only(left: 0.0),
+//            margin: EdgeInsets.only(left: 0.0),
 //                  padding: EdgeInsets.all(0.0),
-            height: 80,
+            height: 60,
             width: 120,
             decoration: BoxDecoration(
               color: Color(0xFF5A768E),
-              borderRadius: BorderRadius.only(
-                topRight: Radius.circular(10.0),
-                bottomRight: Radius.circular(10.0),
-              ),
             ),
-            child: FlatButton(
-              textColor: Color(0xFFDEDBD4),
-              padding: EdgeInsets.all(14.0),
-              onPressed: () {
+            child: GestureDetector(
+              onTap: () {
                 Navigator.push(
                   context,
                   MaterialPageRoute(builder: (context) => SponsorBooksPage()),
@@ -90,12 +83,12 @@ class SponsorBanner extends StatelessWidget {
                 textAlign: TextAlign.left,
                 text: TextSpan(
                   style: TextStyle(
-                    fontSize: 18.0,
+                    fontSize: 14.0,
                     fontWeight: FontWeight.normal,
                   ),
                   children: <TextSpan>[
                     TextSpan(
-                      text: 'SPONSOR ',
+                      text: 'SPONSOR',
                       style: TextStyle(
                         fontWeight: FontWeight.w600,
                       ),
@@ -103,14 +96,25 @@ class SponsorBanner extends StatelessWidget {
                     TextSpan(
                         text: '\na book',
                         style: TextStyle(
-                            fontFamily: ('Spartan'),
                             fontWeight: FontWeight.normal,
-                            fontSize: 16.0)),
+                            fontSize: 14.0)),
                   ],
                 ),
               ),
             ),
           ),
+    Container(
+    padding: EdgeInsets.all(0.0),
+    margin: EdgeInsets.only(right: 0.0),
+    height: 60,
+    width: 10,
+    decoration: BoxDecoration(
+    color: Colors.cyanAccent,
+    borderRadius: BorderRadius.only(
+    topRight: Radius.circular(10.0),
+    bottomRight: Radius.circular(10.0),
+    ),
+    ),)
         ],
       ),
     );

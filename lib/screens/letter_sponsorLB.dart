@@ -1,8 +1,8 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:open_lb/screens/home.dart';
-import 'package:open_lb/screens/titlepage.dart';
 import 'package:open_lb/constr/letter_sponsor_text.dart';
+import 'package:open_lb/screens/sponsor_book.dart';
 
 class LetterSponsor extends StatelessWidget {
   @override
@@ -25,7 +25,7 @@ class LetterSponsor extends StatelessWidget {
                 alignment: AlignmentDirectional.topEnd,
                 children: <Widget>[
                   Container(
-                    height: 60,
+                    height: 40,
                     margin: EdgeInsets.fromLTRB(30.0, 30.0, 30.0, 0.0),
                     decoration: BoxDecoration(
                       color: Color(0xFFc9bbb7),
@@ -37,13 +37,13 @@ class LetterSponsor extends StatelessWidget {
                     child: Center(child: TextTop()),
                   ),
                   Container(
-                    height: 60,
+                    height: 50,
                     margin: EdgeInsets.fromLTRB(30.0, 13.0, 30.0, 0.0),
                     child: Icon(
                       Icons.close,
-                      color: Colors.black54,
-                      size: 26.0,
-                      semanticLabel: 'Text to announce in accessibility modes',
+                      color: Colors.black45,
+                      size: 20.0,
+                      semanticLabel: 'close',
                     ),
                   ),
                 ],
@@ -66,7 +66,7 @@ class LetterSponsor extends StatelessWidget {
               onTap: () {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (context) => TitlePage()),
+                  MaterialPageRoute(builder: (context) => SponsorBooksPage()),
                 );
               },
               child: Column(
@@ -115,7 +115,7 @@ class TextButton extends StatelessWidget {
       textAlign: TextAlign.center,
       text: TextSpan(
         style: TextStyle(
-          fontSize: 18.0,
+          fontSize: 14.0,
           fontWeight: FontWeight.normal,
         ),
         children: <TextSpan>[
@@ -128,9 +128,8 @@ class TextButton extends StatelessWidget {
           TextSpan(
               text: ' a book',
               style: TextStyle(
-                  fontFamily: ('Spartan'),
                   fontWeight: FontWeight.normal,
-                  fontSize: 16.0)),
+                  fontSize: 14.0)),
         ],
       ),
     );
@@ -152,7 +151,6 @@ class TextTop extends StatelessWidget {
           TextSpan(
               text: 'Building an ',
               style: TextStyle(
-                fontFamily: ('Spartan'),
                 fontWeight: FontWeight.normal,
               )),
           TextSpan(
@@ -165,7 +163,6 @@ class TextTop extends StatelessWidget {
           TextSpan(
               text: ', Together',
               style: TextStyle(
-                fontFamily: ('Spartan'),
                 fontWeight: FontWeight.normal,
               )),
         ],

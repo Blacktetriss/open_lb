@@ -1,11 +1,19 @@
 import 'package:flutter/material.dart';
+//import 'package:open_lb/screens/home.dart';
+import 'package:http/http.dart';
+//import 'package:open_lb/screens/test.dart';
+//import 'package:open_lb/screens/test2.dart';
+import 'dart:async';
+import 'dart:convert';
+import 'package:open_lb/screens/bookPage.dart';
 import 'package:open_lb/screens/home.dart';
 
+
 void main() {
-  runApp(MyApp());
+  runApp(OpenLibrary());
 }
 
-class MyApp extends StatelessWidget {
+class OpenLibrary extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -14,11 +22,9 @@ class MyApp extends StatelessWidget {
           accentColor: Color(0xFFc9bbb7),
           backgroundColor: Color(0xFF8B8881),
           scaffoldBackgroundColor: Color(0xFF8B8881),
-          fontFamily: 'Spartan',
           textTheme: TextTheme(
             title: TextStyle(
               color: Colors.black,
-              fontFamily: 'Spartan',
               fontWeight: FontWeight.normal,
               fontSize: (14.0),
             ),
@@ -30,7 +36,7 @@ class MyApp extends StatelessWidget {
               title: TextStyle(
                 color: Colors.black,
                 fontFamily: 'Spartan',
-                fontSize: (20.0),
+                fontSize: (18.0),
                 fontWeight: FontWeight.w500,
               ),
             ),

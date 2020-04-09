@@ -1,11 +1,11 @@
-import 'package:flutter/material.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/painting.dart';
 import 'package:flutter/rendering.dart';
 import 'package:flutter/widgets.dart';
 
 class InputSearch extends StatefulWidget {
-  InputSearch ({Key key}) : super(key: key);
+  InputSearch({Key key}) : super(key: key);
 
   @override
   _InputSearch createState() => _InputSearch();
@@ -25,105 +25,108 @@ class _InputSearch extends State<InputSearch> {
   }
 
   Widget build(BuildContext context) {
-    return
-      Container(
-        margin: EdgeInsets.all(8.0),
-        child: Row(
-          mainAxisSize: MainAxisSize.max,
-          children: <Widget>[
-            Expanded(
-              child: Container(
-                padding: EdgeInsets.all(8.0),
-                margin: EdgeInsets.only(right: 0.0),
-                height: 80,
-                decoration: BoxDecoration(
-                  color: Theme.of(context).accentColor,
-//                color: Color(0xFFc9bbb7),
-                  borderRadius: BorderRadius.only(
-                    topLeft: Radius.circular(10.0),
-                    bottomLeft: Radius.circular(10.0),
-                  ),
-                ),
-child: TextField(
-  decoration: InputDecoration(
-    border: OutlineInputBorder(),
-    labelText: 'search',
-  ),
-),
-//                  child: RichText(
-//                    textAlign: TextAlign.right,
-//                    text: TextSpan(
-//                      style: TextStyle(
-//                        fontSize: 18.0,
-//                        color: Colors.black,
-//                        fontWeight: FontWeight.normal,
-//                      ),
-//                      children: <TextSpan>[
-//                        TextSpan(text: ' Together\, let\'s build an\n'),
-//                        TextSpan(
-//                          text: ' OPEN LIBRARY',
-//                          style: TextStyle(
-//                            fontWeight: FontWeight.w600,
-//                            color: Color(0xFF5A768E),
-//                          ),
-//                        ),
-//                        TextSpan(text: '\n for the '),
-//                        TextSpan(
-//                          text: 'World.',
-//                          style: TextStyle(
-//                            decoration: TextDecoration.underline,
-//                          ),
-//                        ),
-//                      ],
-//                    ),
-//                  ),
-              ),
-            ),
-            Container(
-              margin: EdgeInsets.only(left: 0.0),
-//                  padding: EdgeInsets.all(0.0),
-              height: 80,
-              width: 120,
+    return Container(
+      margin: EdgeInsets.all(4.0),
+      child: Row(
+        mainAxisSize: MainAxisSize.max,
+        children: <Widget>[
+          Expanded(
+            child: Container(
+//              padding: EdgeInsets.all(4.0),
+              margin: EdgeInsets.only(right: 0.0),
+              height: 60,
               decoration: BoxDecoration(
-                color: Color(0xFF5A768E),
+                color: Theme.of(context).accentColor,
                 borderRadius: BorderRadius.only(
-                  topRight: Radius.circular(10.0),
-                  bottomRight: Radius.circular(10.0),
+                  topLeft: Radius.circular(10.0),
+                  bottomLeft: Radius.circular(10.0),
                 ),
               ),
-//              child: FlatButton(
-//                textColor: Color(0xFFDEDBD4),
-//                padding: EdgeInsets.all(14.0),
-//                onPressed: () {
-//                  print('ебать, ты лох');
-//                },
-//                child: RichText(
-//                  textAlign: TextAlign.left,
-//                  text: TextSpan(
-//                    style: TextStyle(
-//                      fontSize: 18.0,
-//                      fontWeight: FontWeight.normal,
-//                    ),
-//                    children: <TextSpan>[
-//                      TextSpan(
-//                        text: 'SPONSOR ',
-//                        style: TextStyle(
-//                          fontWeight: FontWeight.w600,
-//                        ),
-//                      ),
-//                      TextSpan(
-//                          text: '\na book',
-//                          style: TextStyle(
-//                              fontFamily: ('Spartan'),
-//                              fontWeight: FontWeight.normal,
-//                              fontSize: 16.0)),
-//                    ],
-//                  ),
-//                ),
-//              ),
+              child: TextField(
+                style: TextStyle(fontSize: 14.0,
+                ),
+                decoration: InputDecoration(
+                  icon: Icon(Icons.search,
+                    color: Color(0xFF5A768E),
+                  ),
+                    border: InputBorder.none,
+                  labelStyle: TextStyle(
+                    fontWeight: FontWeight.w600,
+                    color: Color(0xFF5A768E),
+                ),
+                  labelText: 'SEARCH',
+                ),
+              ),
             ),
-          ],
-        ),
-      );
+          ),
+          Container(
+            margin: EdgeInsets.only(left: 0.0),
+            height: 60,
+            width: 120,
+            decoration: BoxDecoration(
+              color: Color(0xFF5A768E),
+            ),
+          child: Center(child: DropButtonSearch()),
+          ),
+          Container(
+            padding: EdgeInsets.all(0.0),
+            margin: EdgeInsets.only(right: 0.0),
+            height: 60,
+            width: 10,
+            decoration: BoxDecoration(
+              color: Colors.cyanAccent,
+              borderRadius: BorderRadius.only(
+                topRight: Radius.circular(10.0),
+                bottomRight: Radius.circular(10.0),
+              ),
+            ),)
+        ],
+      ),
+    );
   }
 }
+
+class DropButtonSearch extends StatefulWidget {
+  DropButtonSearch({Key key}) : super(key: key);
+
+  @override
+  _DropButtonSearchState createState() => _DropButtonSearchState();
+}
+
+class _DropButtonSearchState extends State<DropButtonSearch> {
+  String dropdownValue = 'ALL';
+
+  @override
+  Widget build(BuildContext context) {
+    return DropdownButton<String>(
+      value: dropdownValue,
+      icon: Icon(Icons.arrow_downward,
+        color: Colors.white70,),
+      iconSize: 24,
+      elevation: 100,
+      style: TextStyle(
+        color: Colors.red,
+        fontSize: 14.0,
+        fontWeight: FontWeight.w600,
+      ),
+      underline: Container(
+        height: 0,
+        color: Color(0xFF5A768E),
+      ),
+      onChanged: (String newValue) {
+        setState(() {
+          dropdownValue = newValue;
+        });
+      },
+      items: <String>['ALL', 'TITLE', 'AUTHOR', 'TEXT',]
+          .map<DropdownMenuItem<String>>((String value) {
+        return DropdownMenuItem<String>(
+          value: value,
+          child: Text(value),
+        );
+      }).toList(),
+    );
+  }
+}
+
+

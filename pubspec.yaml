@@ -17,6 +17,13 @@ environment:
   sdk: ">=2.1.0 <3.0.0"
 
 dependencies:
+  json_annotation: ^3.0.1
+  convert: ^2.1.1
+  flutter_swiper: ^1.1.6
+  animations: ^1.0.0+5
+  http: ^0.12.0+4
+  async: ^2.4.0
+  english_words: ^3.1.5
   flutter:
     sdk: flutter
 
@@ -25,6 +32,8 @@ dependencies:
   cupertino_icons: ^0.1.2
 
 dev_dependencies:
+  json_serializable: ^3.3.0
+  build_runner: ^1.8.1
   flutter_test:
     sdk: flutter
 
@@ -58,6 +67,9 @@ flutter:
     - science.png
     - scienceFF.png
     - ads.jpg
+    - karate.jpg
+    - king.jpg
+    - king_L.jpg
     - 1.jpg
     - 2.jpg
     - 3.jpg

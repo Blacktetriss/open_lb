@@ -1,19 +1,17 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:open_lb/main.dart';
 import 'package:open_lb/constr/card.dart';
 import 'package:open_lb/constr/input_search.dart';
-import 'package:open_lb/constr/sponsor_banner.dart';
 import 'package:open_lb/screens/home.dart';
 
 class SponsorBooksPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        leading: Icon(Icons.menu),
-        title: Text('BOOKS TO SPONSOR'),
-      ),
+//      appBar: AppBar(
+//        leading: Icon(Icons.menu),
+//        title: Text('BOOKS TO SPONSOR'),
+//      ),
       body: Column(
         children: <Widget>[
           InputSearch(),
